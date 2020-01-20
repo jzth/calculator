@@ -20,3 +20,8 @@ steps:
     npm run build
     npm test
   displayName: 'npm install, build, and test'
+
+- task: GitHubComment@0
+  inputs:
+    gitHubConnection: 'jzth'
+    repositoryName: '$(Build.Repository.Name)'
